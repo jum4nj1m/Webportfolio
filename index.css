@@ -38,6 +38,10 @@ Footer disclaimers or “fine print”
 
 */
 
+html, body {
+ overflow-x: hidden; 
+}
+
 .navbar {
   background-color: #0D1117;
   border-bottom: 2px solid #1E5467;
