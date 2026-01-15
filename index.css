@@ -1,0 +1,156 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+3. Recommended Role Mapping (Clean & Intentional)
+Element Color
+Background  #0D1117
+Primary text  #ABB2BF
+Secondary text  #8B949E
+Borders / lines #0C2E18
+Active / emphasis lines #3B1D1B
+Hover / focus accent  Slightly lighter green or neutral
+
+Primary text (#ABB2BF)
+Purpose: Main content that must be readable and emphasized.
+Usage:
+Paragraphs and body copy
+Section headers and titles
+Navigation links (navbar items, footer links)
+Any text that carries the core message
+
+Secondary text (#8B949E)
+Purpose: Supporting information, less emphasis, lower visual hierarchy.
+
+Usage:
+Captions, metadata, timestamps
+Form hints or placeholder text
+Labels for inputs (when not the main focus)
+Sub‑headings or explanatory notes under a primary heading
+Footer disclaimers or “fine print”
+
+
+*/
+
+.navbar {
+  background-color: #0D1117;
+  border-bottom: 2px solid #0C2E18;
+}
+
+.navbar-brand {
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ABB2BF !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 14px;
+  letter-spacing: 1px; 
+  color: #ABB2BF !important;
+  margin-right: 16px; 
+  opacity: 0.85;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  opacity: 1;
+}
+
+.navbar-nav .nav-link.active {
+  opacity: 1;
+  border-bottom: 2px solid #0C2E18;
+  padding-bottom: 4px; 
+}
+
+.navbar-toggler {
+  border-color: #0C2E18;
+}
+
+
+body {
+  font-family: "Source Code Pro";
+  background-color: #0D1117;
+  font-weight: 400;  
+  font-size: 16px;           
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #ABB2BF;
+}
+
+
+#about p {
+  font-family: "Anonymous Pro";
+  font-weight: 400;  
+  font-size: 16px;           
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #ABB2BF;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Anonymous Pro";
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ABB2BF;
+}
+
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+::placeholder {
+  font-family: "Source Code Pro";
+  color: #8B949E;
+  opacity: 1;
+  font-style: italic;
+}
+
+
+.card-body {
+  background-color: #0D1117;
+}
+
+
+.hash {
+ color: #0C2E18;
+} 
+
+.line { 
+  width: 300px;
+  height: 2px; 
+  background-color: #0C2E18;
+}
+
+
+/*Code Styling (RESERVE) */
+
+code,
+pre {
+  font-family: "Source Code Pro";
+  font-size: 0.95rem;
+  background-color: #161b22;
+  color: #ABB2BF;
+}
+
+code {
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+
