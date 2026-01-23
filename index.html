@@ -1,4 +1,5 @@
 <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -19,233 +20,281 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark mb-5">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#landing">Jum4nj1m</a>
+        <a class="navbar-brand d-flex align-items-center" href="#landing"> 
+          <img src="./images/picture.png" alt="Logo" class="brand-logo"> 
+          <span class="ms-2">Jum4nj1m</span> </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#landing">HOME</a>
-            <a class="nav-link" href="#projects">MY PROJECTS</a>
-            <a class="nav-link" href="#tools">TOOLS</a>
-            <a class="nav-link" href="#contact">CONTACT</a>
+            <a class="nav-link" href="#landing"><strong>HOME</strong></a>
+            <a class="nav-link" href="#projects"><strong>MY PROJECTS</strong></a>
+            <a class="nav-link" href="#tools"><strong>TOOLS</strong></a>
+            <a class="nav-link" href="#about-me"><strong>ABOUT-ME</strong></a>
+            <a class="nav-link" href="#contact"><strong>CONTACT</strong></a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- About Me Section -->
-    <section id="landing">
+    <section class="my-2" id="landing">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 text-center my-3 ">
-            <img src="./images/picture.png" class="img-fluid rounded-pill"alt="James Profile">
+            <img src="./images/picture.png" class="img-fluid profile-picture"alt="Rounded image of James">
           </div>
 
           <div class="col-12 col-md-8">
-            <h2>Hi, I’m James!</h2>
-            <h2>Full Stack Web Developer</h2>
-
-            <p>
-              I’m a Security Enthusiast and Full Stack Web Developer with a passion for building secure, responsive applications. Skilled in <span class="fw-bold">front‑end design</span> and <span class="fw-bold">back‑end development</span>, I combine creativity with cybersecurity expertise to deliver solutions that are both functional and resilient.
-
-            </p>
+            <div class="mb-4">
+              <h3>James is a <span style="color: #C778DD; font-weight: bold;">Full-Stack Web Developer</span> and a <span style="color: #C778DD; font-weight: bold;">cybersecurity specialist.</span></h3>
+            </div>
+            <div>
+              <p> Building secure-by-design applications with a focus on clean code, responsive layouts, and end-to-end protection.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-3">
-      <div class="row d-none d-md-block p-3 p-md-5">
-        <div class="mx-auto text-start">
-          <h2><span class="hash">#</span>Projects</h2><div class="line"></div>
-        </div>
+    <section id="projects">
+      <div class="container-fluid text-start my-5">
+        <div class="d-flex align-items-center mb-4 ms-5 text-start"> 
+            <h2><span class="hash">#</span>projects</h2> 
+        <div class="line"></div> 
       </div>
 
-      <div class="container-fluid text-start">
-        <div class="row justify-content-evenly flex-wrap">
+        <div class="row justify-content-evenly g-5 mx-5">
           <!-- Project Cards -->
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/ecommerce-api.png" class="card-img-top" alt="E-commerce API">
-            <div class="card-body">
-              <h5 class="card-title mb-3">E-commerce API Documentation</h5>
-              <p class="card-text">A technical reference detailing endpoints, methods, and data structures for integrating online shopping features such as product listings, carts, and payments.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/ecommerce-api.png" class="card-img-top" alt="E-commerce API">
+              <div class="card-body">
+                <h5 class="card-title mb-3">E-commerce API Documentation</h5>
+                <p class="card-text">A technical reference detailing endpoints, methods, and data structures for integrating online shopping features such as product listings, carts, and payments.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/booking-api.png" class="card-img-top" alt="Course Booking API">
-            <div class="card-body">
-              <h5 class="card-title mb-3">Course Booking API Documentation</h5>
-              <p class="card-text"> Specifications for developers to connect with a system that manages course schedules, enrollments, and user registrations.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/booking-api.png" class="card-img-top" alt="Course Booking API">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Course Booking API Documentation</h5>
+                <p class="card-text"> Specifications for developers to connect with a system that manages course schedules, enrollments, and user registrations.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/booking-app.png" class="card-img-top" alt="Course Booking App">
-            <div class="card-body">
-              <h5 class="card-title mb-3">Course Booking App</h5>
-              <p class="card-text">A front-end application enabling users to browse, book, and manage courses, often linked to the API for real-time updates.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/booking-app.png" class="card-img-top" alt="Course Booking App">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Course Booking App</h5>
+                <p class="card-text">A front-end application enabling users to browse, book, and manage courses, often linked to the API for real-time updates.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/ecommerce-app.png" class="card-img-top" alt="E-commerce App">
-            <div class="card-body">
-              <h5 class="card-title mb-3">E-commerce App</h5>
-              <p class="card-text">A consumer-facing application that allows browsing products, adding to cart, and completing purchases, typically designed for mobile or web.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/ecommerce-app.png" class="card-img-top" alt="E-commerce App">
+              <div class="card-body">
+                <h5 class="card-title mb-3">E-commerce App</h5>
+                <p class="card-text">A consumer-facing application that allows browsing products, adding to cart, and completing purchases, typically designed for mobile or web.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/airline-mockup.png" class="card-img-top" alt="Airline Booking System Mockup">
-            <div class="card-body">
-              <h5 class="card-title mb-3">Airline Booking System Mockup</h5>
-              <p class="card-text">A visual design draft showing the layout and user interface of an airline booking platform, used for feedback before development.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/airline-mockup.png" class="card-img-top" alt="Airline Booking System Mockup">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Airline Booking System Mockup</h5>
+                <p class="card-text">A visual design draft showing the layout and user interface of an airline booking platform, used for feedback before development.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/airline-prototype.png" class="card-img-top" alt="Airline Booking System Prototype">
-            <div class="card-body">
-              <h5 class="card-title mb-3">Airline Booking System Prototype</h5>
-              <p class="card-text">An interactive early version of the booking system that simulates core functions like searching flights and reserving seats.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/airline-prototype.png" class="card-img-top" alt="Airline Booking System Prototype">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Airline Booking System Prototype</h5>
+                <p class="card-text">An interactive early version of the booking system that simulates core functions like searching flights and reserving seats.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="./images/capstone.png" class="card-img-top" alt="Short Courses Capstone">
-            <div class="card-body text-start">
-              <h5 class="card-title mb-3">Short Courses Capstone</h5>
-              <p class="card-text">A culminating project that integrates skills learned from short courses, often demonstrating practical application in a real-world scenario.</p>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="./images/capstone.png" class="card-img-top" alt="Short Courses Capstone">
+              <div class="card-body text-start">
+                <h5 class="card-title mb-3">Short Courses Capstone</h5>
+                <p class="card-text">A culminating project that integrates skills learned from short courses, often demonstrating practical application in a real-world scenario.</p>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
 
     <!-- Tools Section -->
-    <section id="tools">
-      <div class="row d-none d-md-block p-3 p-md-5">
-        <div class="mx-auto text-start">
-          <h2><span class="hash">#</span>Tools</h2><div class="line"></div>
+    <section class="my-5" id="tools">
+      <div class="container-fluid">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex align-items-center">
+              <h2><span class="hash">#</span>tools</h2>
+              <div class="line"></div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="container-fluid text-start">
-        <div class="row justify-content-evenly flex-wrap">
+        <!-- Tools Grid -->
+        <div class="row align-items-start g-5">
+          
+          <!-- Front End -->
           <div class="col-12 col-md-4">
-            <h4>Front End</h4>
-            <ul>
-              <li><img src="./images/html5.png" class="img-fluid tool-icon" alt="HTML5"></li>
-              <li><img src="./images/css3.png" class="img-fluid tool-icon" alt="CSS3"></li>
-              <li><img src="./images/bootstrap.png" class="img-fluid tool-icon" alt="Bootstrap"></li>
-              <li><img src="./images/javascript.png" class="img-fluid tool-icon" alt="JavaScript"></li>
-            </ul>
+            <h4 class="text-center mb-3">Front End</h4>
+            <div class="tool-box">
+              <ul class="tool-list">
+                <li><img src="./images/html5.png" class="img-fluid tool-icon" alt="HTML5"></li>
+                <li><img src="./images/css3.png" class="img-fluid tool-icon" alt="CSS3"></li>
+                <li><img src="./images/bootstrap.png" class="img-fluid tool-icon" alt="Bootstrap"></li>
+                <li><img src="./images/javascript.png" class="img-fluid tool-icon" alt="JavaScript"></li>
+              </ul>
+            </div>
           </div>
 
+          <!-- MERN -->
           <div class="col-12 col-md-4">
-            <h4>MERN</h4>
-            <ul>
-              <li><img src="./images/mongo.png" class="img-fluid tool-icon" alt="MongoDB"></li>
-              <li><img src="./images/expressjs.png" class="img-fluid tool-icon" alt="ExpressJS"></li>
-              <li><img src="./images/react.png" class="img-fluid tool-icon" alt="React"></li>
-              <li><img src="./images/nodejs.png" class="img-fluid tool-icon" alt="NodeJS"></li>
-            </ul>
+            <h4 class="text-center mb-3">MERN</h4>
+            <div class="tool-box">
+              <ul class="tool-list">
+                <li><img src="./images/mongo.png" class="img-fluid tool-icon" alt="MongoDB"></li>
+                <li><img src="./images/expressjs.png" class="img-fluid tool-icon" alt="ExpressJS"></li>
+                <li><img src="./images/react.png" class="img-fluid tool-icon" alt="React"></li>
+                <li><img src="./images/nodejs.png" class="img-fluid tool-icon" alt="NodeJS"></li>
+              </ul>
+            </div>
           </div>
 
+          <!-- Other Tools -->
           <div class="col-12 col-md-4">
-            <h4>Other Tools</h4>
-            <ul>
-              <li><img src="./images/heroku.png" class="img-fluid tool-icon" alt="Heroku"></li>
-              <li><img src="./images/git.png" class="img-fluid tool-icon" alt="Git"></li>
-              <li><img src="./images/postman.png" class="img-fluid tool-icon" alt="Postman"></li>
-              <li><img src="./images/sublime.png" class="img-fluid tool-icon" alt="Sublime Text"></li>
-            </ul>
+            <h4 class="text-center mb-3">Other Tools</h4>
+            <div class="tool-box">
+              <ul class="tool-list">
+                <li><img src="./images/heroku.png" class="img-fluid tool-icon" alt="Heroku"></li>
+                <li><img src="./images/git.png" class="img-fluid tool-icon" alt="Git"></li>
+                <li><img src="./images/postman.png" class="img-fluid tool-icon" alt="Postman"></li>
+                <li><img src="./images/sublime.png" class="img-fluid tool-icon" alt="Sublime Text"></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="row d-none d-md-block p-3 p-md-5">
-        <div class="mx-auto text-start">
-          <h2><span class="hash">#</span>Contact</h2><div class="line"></div>
+
+    <!-- About me -->
+    <section class="my-5" id="about-me">
+      <div class="container-fluid">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex align-items-center"> 
+              <h2><span class="hash">#</span>about-me</h2> 
+              <div class="line"></div> 
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="container">
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Your name</label>
-            <input type="text" class="form-control" id="name" placeholder="John Doe">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8">
+            <h2 class="display-6 fw-bold">Hey, I’m James!</h2>
+            <p>I’m a <span style="color: #C778DD; font-weight: bold;">Full-Stack Web Developer</span> and <span style="color: #C778DD; font-weight: bold;">cybersecurity specialist</span> from the Philippines. I’ve spent years diving deep into the world of code and digital defense, building websites that don’t just look good but stand strong against threats.</p>
+
+            <p>My background blends front-end design, full-stack development, and web application security, giving me a unique edge in crafting experiences that are both beautiful and bulletproof.</p>
+
+            <p>Whether I’m designing interfaces or fortifying backends, I bring a hands-on, curious mindset to everything I build.</p>
           </div>
 
-          <div class="mb-3">
-            <label for="email" class="form-label">Your email</label>
-            <input type="email" class="form-control" id="email" placeholder="name@company.com">
+          <div class="col-12 col-md-4 text-center my-3">
+            <img src="./images/hoodie.png" class="img-fluid" alt="Image of person with hoodie">
           </div>
-
-          <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" class="form-control" id="subject">
-          </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Your message</label>
-            <textarea class="form-control" id="message" rows="5"></textarea>
-          </div>
-
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary">Send message</button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
 
 
+    <!-- contact page -->
+    <section class="my-5" id="contact">
+      <div class="container-fluid">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex align-items-center"> 
+              <h2><span class="hash">#</span>contacts</h2> 
+              <div class="line"></div> 
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-md-8">
+            <!-- Contact form -->
+            <form class="contact-form align-items-center mx-auto">
+              <div class="mb-2">
+                <label for="name" class="form-label-custom">Name</label>
+                <input type="text" class="input-custom" id="name" placeholder="John Doe">
+              </div>
+
+              <div class="mb-2">
+                <label for="email" class="form-label-custom">Email</label>
+                <input type="email" class="input-custom" id="email" placeholder="name@company.com">
+              </div>
+
+              <div class="mb-2">
+                <label for="subject" class="form-label-custom">Subject</label>
+                <input type="text" class="input-custom" id="subject">
+              </div>
+
+              <div class="mb-2">
+                <label for="message" class="form-label-custom">Message</label>
+                <textarea class="textarea-custom" id="message" rows="5"></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn-custom">Send message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- footer -->
     <footer class="text-light py-4">
-      <div class="row d-none d-md-block p-3 p-md-5">
-        <div class="mx-auto text-start">
-          <!-- Left side: info -->
-          <div class="col-md-6 mb-3 mb-md-0">
-            <h5>James</h5>
-            <p>Security Consultant & Full Stack Developer</p>
-            <p>&copy; 2026. Made by James Pilar</p>
+      <div class="container-fluid px-4">
+        <div class="row align-items-center">
+          
+          <!-- Left side -->
+          <div class="col-md-6 mb-3 mb-md-0 text-start">
+            <p>&copy; 2026 Jum4nj1m Theme. All Rights Reserved.</p>
           </div>
 
-
-          <!-- Right side: media links -->
+          <!-- Right side -->
           <div class="col-md-6 text-md-end">
-            <h5>Media</h5>
-            <a href="https://github.com/jum4nj1m" target="_blank" class="text-light me-3">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/james-vhoun/" target="_blank" class="text-light me-3">
-              LinkedIn
-            </a>
-            <a href="https://discord.gg/yourinvitecode" target="_blank" class="text-light">
-              StackOverflow
-            </a>
+            <a href="https://github.com/jum4nj1m" target="_blank" class="footer-link me-3"><img src="./images/github.png"></a>
+            <a href="https://www.linkedin.com/in/james-vhoun/" target="_blank" class="footer-link me-3"><img src="./images/linkedin.png"></a>
+            <a href="https://www.hackerrank.com/profile/jum4nj1m1" target="_blank" class="footer-link"><img src="./images/hackerrank.png"></a>
           </div>
+
         </div>
       </div>
     </footer>

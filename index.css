@@ -1,5 +1,4 @@
 /* CSS Reset */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,44 +6,21 @@
 }
 
 /*
-3. Recommended Role Mapping (Clean & Intentional)
-Element Color
-Background  #0D1117
-Primary text  #ABB2BF
-Secondary text  #8B949E
-Borders/Lines #1E5467
-Hashes and lines #17A5A8
-Active / emphasis lines #3B1D1B
-Hover / focus accent  Slightly lighter green or neutral
-
-Primary text (#ABB2BF)
-Purpose: Main content that must be readable and emphasized.
-Usage:
-Paragraphs and body copy
-Section headers and titles
-Navigation links (navbar items, footer links)
-Any text that carries the core message
-
-Secondary text (#8B949E)
-Purpose: Supporting information, less emphasis, lower visual hierarchy.
-
-Usage:
-Captions, metadata, timestamps
-Form hints or placeholder text
-Labels for inputs (when not the main focus)
-Sub‑headings or explanatory notes under a primary heading
-Footer disclaimers or “fine print”
-
-
+Color Roles
+Background        #282C33
+Headers           #FFFFFF
+Paragraphs        #ABB2BF
+Borders           #ABB2BF
+Accent/CTA        #C778DD
 */
 
 html, body {
- overflow-x: hidden; 
+  overflow-x: hidden; 
 }
 
 .navbar {
-  background-color: #0D1117;
-  border-bottom: 2px solid #1E5467;
+  background-color: #282C33;
+  border-bottom: 2px solid #C778DD;
 }
 
 .navbar-brand {
@@ -59,36 +35,42 @@ html, body {
   font-size: 14px;
   letter-spacing: 1px; 
   color: #ABB2BF !important;
-  margin-right: 16px; 
-  opacity: 0.85;
-  transition: opacity 0.2s ease, border-color 0.2s ease;
+  margin-right: 16px;
+  transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  opacity: 1;
-}
-
-.navbar-nav .nav-link.active {
-  opacity: 1;
-  border-bottom: 2px solid #1E5467;
-  padding-bottom: 4px; 
+  color: #C778DD !important;
 }
 
 .navbar-toggler {
-  border-color: #1E5467;
+  border-color: #ABB2BF;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #C778DD;
+  object-fit: cover;
+}
+
+.profile-picture { 
+  border-radius: 50%;
+  border: 3px solid #C778DD;
+  object-fit: cover;
 }
 
 
 body {
   font-family: "Source Code Pro";
-  background-color: #0D1117;
+  background-color: #282C33;
   font-weight: 400;  
   font-size: 16px;           
   line-height: 26px;
   letter-spacing: 0;
   color: #ABB2BF;
 }
-
 
 #about p {
   font-family: "Anonymous Pro";
@@ -104,9 +86,8 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Anonymous Pro";
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: #ABB2BF;
+  color: #FFFFFF;
 }
-
 
 p {
   margin-bottom: 1rem;
@@ -119,42 +100,136 @@ ul {
 
 ::placeholder {
   font-family: "Source Code Pro";
-  color: #8B949E;
+  color: #ABB2BF;
   opacity: 1;
   font-style: italic;
 }
 
-
 .card-body {
-  background-color: #0D1117;
-}
-
-
-.hash {
- color: #1E5467;
-
-} 
-
-.line { 
-  width: 300px;
-  height: 4px; 
-  background-color: #1E5467;
+  background-color: #282C33;
 }
 
 .card {
-  border: 2px solid #1E5467;
+  border: 2px solid #ABB2BF;
   border-radius: 3px;
 }
 
-.tool-icon {
+.card > img {
   max-width: auto;
-  max-height: 60px;
+  max-height: 400px;
+}
+
+.tool-box {
+  border: 2px solid #ABB2BF;
+  padding: 1rem;
+  background-color: #282C33;
+}
+
+.tool-list {
+  display: flex; 
+  flex-wrap: wrap;  
+  gap: 1rem;   
+  list-style: none;  
+  margin: 0;
+  padding: 0;
+}
+
+.tool-list li {
+  flex: 1 1 40%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-icon {
+  height: 60px;
+  width: auto;     /* replaces invalid max-width: auto */
   padding: 6px;
   border-radius: 15px;
 }
 
-/*Code Styling (RESERVE) */
+.hash {
+  color: #C778DD;
+  margin-right: 0.3rem;
+  font-size: 3.5rem;
+}
 
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #C778DD;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* Form container */
+.contact-form {
+  max-width: 700px;
+  /*background-color: #282C33;*/
+  padding: 2rem;
+  /*border: 3px solid #ABB2BF;*/
+}
+
+/* Labels */
+.form-label-custom {
+  color: #ABB2BF;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Inputs */
+.input-custom, .textarea-custom {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #282C33;
+  border: 1px solid #ABB2BF;
+  color: #ABB2BF;
+}
+
+.input-custom:focus, .textarea-custom:focus {
+  outline: none;
+  border-color: #C778DD;
+  box-shadow: 0 0 6px rgba(199, 120, 221, 0.6);
+}
+
+/* Button */
+.btn-custom {
+  background-color: #282C33;
+  color: #ABB2BF;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ABB2BF;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #ABB2BF;
+  color: #282C33;
+}
+
+footer {
+  border-top: 2px solid #C778DD;
+  background-color: #282C33;
+}
+
+.footer-link {
+  color: #ABB2BF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #C778DD;
+}
+
+footer img {
+  max-width: auto;
+  max-height: 40px;
+  padding: 4px;
+}
+
+
+/*Code Styling (RESERVE) */
 code,
 pre {
   font-family: "Source Code Pro";
@@ -173,5 +248,3 @@ pre {
   border-radius: 6px;
   overflow-x: auto;
 }
-
-
