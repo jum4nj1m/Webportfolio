@@ -98,11 +98,60 @@ ul {
   padding-left: 0;
 }
 
+
+.quote-container {
+  position: relative;
+  display: inline-block;
+}
+
+.quote-text {
+  border: 1px solid #5c6370;
+  padding: 30px 50px;
+  color: #abb2bf;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+}
+
+/* Creating the quotation marks */
+.quote-text::before, .quote-author::after {
+  content: '“';
+  position: absolute;
+  font-size: 50px;
+  color: #5c6370;
+  background-color: #282c34;
+  padding: 0 10px;
+  line-height: 1;
+}
+
+.quote-text::before {
+  top: -25px;
+  left: 20px;
+}
+
+.quote-author {
+  position: absolute;
+  right: -1px;
+  bottom: -45px;
+  border: 1px solid #5c6370;
+  border-top: none;
+  padding: 15px 30px;
+  color: #abb2bf;
+  font-size: 18px;
+  background-color: #282c34;
+}
+
+.quote-author::after {
+  content: '”';
+  top: -25px;
+  right: 20px;
+}
+
+
 ::placeholder {
   font-family: "Source Code Pro";
   color: #ABB2BF;
   opacity: 1;
-  font-style: italic;
 }
 
 .card-body {
