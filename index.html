@@ -1,14 +1,23 @@
 <!doctype html>
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="James - Cybersecurity Specialist & DevSecOps Engineer Portfolio">
+    <meta property="og:title" content="James | Cybersecurity & Automation">
+    <meta property="og:description" content="Building secure, automated systems through a Shift-Left approach.">
+    <meta property="og:image" content="./images/picture.png">
 
-    <title>Portfolio</title>
+    <title>James | Cybersecurity & DevSecOps Portfolio</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- For recaptcha process -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- Applying Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://api.emailjs.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.emailjs.com https://www.google.com/recaptcha/; img-src 'self'; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/;">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="./index.css">
 
@@ -16,14 +25,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
+
   </head>
 
   <body>
+    <canvas id="matrix-bg"></canvas>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark mb-5">
+    <nav class="navbar navbar-expand-lg navbar-dark mb-5" aria-label="Main navigation">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="#landing"> 
-          <img src="./images/picture.png" alt="Logo" class="brand-logo"> 
+          <img src="./images/picture.png" alt="Logo" class="brand-logo" width="40" height="40"> 
           <span class="ms-2">Jum4nj1m</span> </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
@@ -33,7 +44,7 @@
           <div class="navbar-nav">
             <a class="nav-link" href="#landing"><strong>HOME</strong></a>
             <a class="nav-link" href="#projects"><strong>MY PROJECTS</strong></a>
-            <a class="nav-link" href="#tools"><strong>TOOLS</strong></a>
+            <a class="nav-link" href="#specialization"><strong>SPECIALIZATION</strong></a>
             <a class="nav-link" href="#about-me"><strong>ABOUT-ME</strong></a>
             <a class="nav-link" href="#contact"><strong>CONTACT</strong></a>
           </div>
@@ -42,20 +53,26 @@
     </nav>
 
     <!-- About Me Section -->
-    <section class="my-2" id="landing">
+    <section class="my-5" id="landing">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-md-4 text-center my-3 ">
-            <img src="./images/picture.png" class="img-fluid profile-picture"alt="Rounded image of James">
+            <img src="./images/picture.png" class="img-fluid profile-picture" alt="Photo of James" loading="lazy">
           </div>
 
           <div class="col-12 col-md-8">
-            <div class="mb-4">
-              <h3>James is a <span style="color: #C778DD; font-weight: bold;">Full-Stack Web Developer</span> and a <span style="color: #C778DD; font-weight: bold;">cybersecurity specialist.</span></h3>
-            </div>
-            <div>
-              <p> Building secure-by-design applications with a focus on clean code, responsive layouts, and end-to-end protection.</p>
-            </div>
+              <div class="mb-4">
+                  <h3>James is a <span class="accent">cybersecurity specialist</span> with a passion for <span class="accent">web development and automation.</span></h3>
+              </div>
+              <div class="mb-4">
+                  <p>My goal is to ensure that the code and applications I am a part of are <span class="accent">secure and safe</span> not just for the sake of making them work.</p>
+              </div>
+              <div>
+                  <a href="#about-me" class="format-tag-arrow">
+                      Learn more about me
+                  </a>
+              </div>
+          </div>
 
             <div class="quote-container mt-5">
               <div class="quote-text">
@@ -72,139 +89,294 @@
 
     <!-- Projects Section -->
     <section id="projects">
-      <div class="container-fluid text-start my-5">
-        <div class="d-flex align-items-center mb-4 ms-5 text-start"> 
-            <h2><span class="hash">#</span>projects</h2> 
-        <div class="line"></div> 
-      </div>
+      <div class="container my-1">
 
-        <div class="row justify-content-evenly g-5 mx-5">
-          <!-- Project Cards -->
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/ecommerce-api.png" class="card-img-top" alt="E-commerce API">
-              <div class="card-body">
-                <h5 class="card-title mb-3">E-commerce API Documentation</h5>
-                <p class="card-text">A technical reference detailing endpoints, methods, and data structures for integrating online shopping features such as product listings, carts, and payments.</p>
+        <div class="d-flex align-items-center mb-4 text-start">
+          <h2><span class="hash">#</span>PROJECTS</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="mb-5">
+          <h3><span class="hash mb-4">#</span>Web Development</h3>
+          <div class="format-grid">
+
+            <div class="format-card">
+              <div class="format-header">E-commerce API Documentation</div>
+              <p class="format-desc">A technical reference detailing endpoints, methods, and data structures for integrating online shopping features.</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Postman</span>
+                  <span class="format-tag">OpenAPI</span>
+                  <span class="format-tag">CRUD</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/booking-api.png" class="card-img-top" alt="Course Booking API">
-              <div class="card-body">
-                <h5 class="card-title mb-3">Course Booking API Documentation</h5>
-                <p class="card-text"> Specifications for developers to connect with a system that manages course schedules, enrollments, and user registrations.</p>
+            <div class="format-card">
+              <div class="format-header">Course Booking API Documentation</div>
+              <p class="format-desc">Specifications for developers to connect with a system that manages course schedules and enrollments.</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Postman</span>
+                  <span class="format-tag">OpenAPI</span>
+                  <span class="format-tag">CRUD</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/booking-app.png" class="card-img-top" alt="Course Booking App">
-              <div class="card-body">
-                <h5 class="card-title mb-3">Course Booking App</h5>
-                <p class="card-text">A front-end application enabling users to browse, book, and manage courses, often linked to the API for real-time updates.</p>
+            <div class="format-card">
+              <div class="format-header">Course Booking App</div>
+              <p class="format-desc">A front-end application enabling users to browse, book, and manage courses with real-time updates.</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">MERN Stack</span>
+                  <span class="format-tag">JWT Auth</span>
+                  <span class="format-tag">REST API</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/ecommerce-app.png" class="card-img-top" alt="E-commerce App">
-              <div class="card-body">
-                <h5 class="card-title mb-3">E-commerce App</h5>
-                <p class="card-text">A consumer-facing application that allows browsing products, adding to cart, and completing purchases, typically designed for mobile or web.</p>
+            <div class="format-card">
+              <div class="format-header">E-commerce App</div>
+              <p class="format-desc">A consumer-facing application that allows browsing products, adding to cart, and completing purchases.</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">MERN Stack</span>
+                  <span class="format-tag">JWT Auth</span>
+                  <span class="format-tag">REST API</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/airline-mockup.png" class="card-img-top" alt="Airline Booking System Mockup">
-              <div class="card-body">
-                <h5 class="card-title mb-3">Airline Booking System Mockup</h5>
-                <p class="card-text">A visual design draft showing the layout and user interface of an airline booking platform, used for feedback before development.</p>
+            <div class="format-card">
+              <div class="format-header">Airline Booking App</div>
+              <p class="format-desc">A full-featured application for users to search, compare, and book airline tickets. Currently in active development.</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">MERN Stack</span>
+                  <span class="format-tag">JWT Auth</span>
+                  <span class="format-tag">REST API</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/airline-prototype.png" class="card-img-top" alt="Airline Booking System Prototype">
-              <div class="card-body">
-                <h5 class="card-title mb-3">Airline Booking System Prototype</h5>
-                <p class="card-text">An interactive early version of the booking system that simulates core functions like searching flights and reserving seats.</p>
+            <div class="format-card">
+              <div class="format-header">Airline Booking Prototype</div>
+              <p class="format-desc">An interactive early version that simulates core functions like searching flights and reserving seats.</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">UI/UX Design</span>
+                  <span class="format-tag">Figma</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <div class="card h-100">
-              <img src="./images/capstone.png" class="card-img-top" alt="Short Courses Capstone">
-              <div class="card-body text-start">
-                <h5 class="card-title mb-3">Short Courses Capstone</h5>
-                <p class="card-text">A culminating project that integrates skills learned from short courses, often demonstrating practical application in a real-world scenario.</p>
-              </div>
-            </div>
           </div>
         </div>
+
+        <div class="mb-5">
+          <h3><span class="hash mb-4">#</span>DevSecOps & Automation</h3>
+          <div class="format-grid">
+
+            <div class="format-card">
+              <div class="format-header">DevSecOps-Java-workflow</div>
+              <p class="format-desc">Automated CI/CD pipeline implementation for Java applications focusing on security scanning and compliance.</p>
+              <a href="https://github.com/jum4nj1m/DevSecOps-Java-workflow/tree/master" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Java</span>
+                  <span class="format-tag">Jenkins</span>
+                  <span class="format-tag">Security</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="format-card">
+              <div class="format-header">DevSecOps-Nodejs-workflow</div>
+              <p class="format-desc">Integrating security into the Node.js lifecycle, including dependency auditing and container security.</p>
+              <a href="https://github.com/jum4nj1m/DevSecOps-Nodejs-Workflow" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Node.js</span>
+                  <span class="format-tag">Docker</span>
+                  <span class="format-tag">SAST</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="format-card">
+              <div class="format-header">DevSecOps-Python-workflow</div>
+              <p class="format-desc">A robust automation workflow for Python projects featuring unit tests, linting, and automated vulnerability checks.</p>
+              <a href="https://github.com/jum4nj1m/DevSecOps-Python-Workflow" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Python</span>
+                  <span class="format-tag">GitHub Actions</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="format-card">
+              <div class="format-header">Auto AI Hunt</div>
+              <p class="format-desc">An automation framework leveraging OpenAI to generate threat hunting hypotheses and Sigma/YARA logic.</p>
+              <a href="https://github.com/jum4nj1m/Auto-AI-Hunt" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Python</span>
+                  <span class="format-tag">LLM</span>
+                  <span class="format-tag">Threat Intel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="format-card">
+              <div class="format-header">Threat Hunt Reporter</div>
+              <p class="format-desc">SecOps tool for automated report generation featuring Matplotlib visualization and PySide6 UI.</p>
+              <a href="https://github.com/jum4nj1m/Threat-Hunt-Report-Automation" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Python</span>
+                  <span class="format-tag">Matplotlib</span>
+                  <span class="format-tag">PySide6</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="format-card">
+              <div class="format-header">IOC Parser</div>
+              <p class="format-desc">Script for automated extraction of Indicators of Compromise (IOCs) from unstructured data using Regex.</p>
+              <a href="https://github.com/jum4nj1m/IOC-Parser" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">Python</span>
+                  <span class="format-tag">Regex</span>
+                  <span class="format-tag">OSINT</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h3><span class="hash mb-4">#</span>Web Application Security</h3>
+          <div class="format-grid">
+
+            <div class="format-card">
+              <div class="format-header">Publishing soon...</div>
+              <p class="format-desc">...</p>
+              <a href="#" class="format-tag-arrow" target="_blank" rel="noopener noreferrer">Github Link <span class="arrows"></span></a>
+              <div>
+                <div class="format-label mt-2">Technologies</div>
+                <div class="format-tags">
+                  <span class="format-tag">..</span>
+                  <span class="format-tag">..</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Tools Section -->
-    <section class="my-5" id="tools">
-      <div class="container-fluid">
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="d-flex align-items-center">
-              <h2><span class="hash">#</span>tools</h2>
-              <div class="line"></div>
-            </div>
-          </div>
+    <!-- Specialization Section -->
+    <section id="specialization">
+      <div class="container my-1">
+        <div class="d-flex align-items-center mb-4 text-start">
+          <h2><span class="hash">#</span>SPECIALIZATION</h2>
+          <div class="line"></div> 
         </div>
 
-        <!-- Tools Grid -->
-        <div class="row align-items-start g-5">
-          
-          <!-- Front End -->
-          <div class="col-12 col-md-4">
-            <h4 class="text-center mb-3">Front End</h4>
-            <div class="tool-box">
-              <ul class="tool-list">
-                <li><img src="./images/html5.png" class="img-fluid tool-icon" alt="HTML5"></li>
-                <li><img src="./images/css3.png" class="img-fluid tool-icon" alt="CSS3"></li>
-                <li><img src="./images/bootstrap.png" class="img-fluid tool-icon" alt="Bootstrap"></li>
-                <li><img src="./images/javascript.png" class="img-fluid tool-icon" alt="JavaScript"></li>
-              </ul>
-            </div>
+      <div class="format-grid">
+          <div class="format-card">
+              <div class="format-header">Cybersecurity</div>
+              <p class="format-desc">Focusing on Blue Team operations, threat hunting, and incident response engineering.</p>
+              
+              <div>
+                  <div class="format-label">Operations</div>
+                  <div class="format-tags">
+                      <span class="format-tag">Threat Hunting</span>
+                      <span class="format-tag">SIEM/EDR</span>
+                      <span class="format-tag">Incident Response</span>
+                      <span class="format-tag">Detection Engineering</span>
+                  </div>
+              </div>
+              
+              <div>
+                  <div class="format-label">Logic</div>
+                  <div class="format-tags">
+                      <span class="format-tag">Sigma Rules</span>
+                      <span class="format-tag">MITRE ATT&CK</span>
+                      <span class="format-tag">Query Language</span>
+                  </div>
+              </div>
           </div>
 
-          <!-- MERN -->
-          <div class="col-12 col-md-4">
-            <h4 class="text-center mb-3">MERN</h4>
-            <div class="tool-box">
-              <ul class="tool-list">
-                <li><img src="./images/mongo.png" class="img-fluid tool-icon" alt="MongoDB"></li>
-                <li><img src="./images/expressjs.png" class="img-fluid tool-icon" alt="ExpressJS"></li>
-                <li><img src="./images/react.png" class="img-fluid tool-icon" alt="React"></li>
-                <li><img src="./images/nodejs.png" class="img-fluid tool-icon" alt="NodeJS"></li>
-              </ul>
-            </div>
+          <div class="format-card">
+              <div class="format-header">DevSecOps</div>
+              <p class="format-desc">Integrating security into the CI/CD pipeline through automation and scanning.</p>
+              
+              <div>
+                  <div class="format-label">Automation</div>
+                  <div class="format-tags">
+                      <span class="format-tag">GitHub Actions</span>
+                      <span class="format-tag">Jenkins</span>
+                      <span class="format-tag">Terraform</span>
+                  </div>
+              </div>
+
+              <div>
+                  <div class="format-label">Scanning</div>
+                  <div class="format-tags">
+                      <span class="format-tag">Snyk</span>
+                      <span class="format-tag">OWASP ZAP</span>
+                      <span class="format-tag">SonarCloud</span>
+                  </div>
+              </div>
           </div>
 
-          <!-- Other Tools -->
-          <div class="col-12 col-md-4">
-            <h4 class="text-center mb-3">Other Tools</h4>
-            <div class="tool-box">
-              <ul class="tool-list">
-                <li><img src="./images/heroku.png" class="img-fluid tool-icon" alt="Heroku"></li>
-                <li><img src="./images/git.png" class="img-fluid tool-icon" alt="Git"></li>
-                <li><img src="./images/postman.png" class="img-fluid tool-icon" alt="Postman"></li>
-                <li><img src="./images/sublime.png" class="img-fluid tool-icon" alt="Sublime Text"></li>
-              </ul>
-            </div>
+          <div class="format-card">
+              <div class="format-header">Web Development</div>
+              <p class="format-desc">Building secure, scalable full-stack applications with the MERN stack.</p>
+              
+              <div>
+                  <div class="format-label">Frontend</div>
+                  <div class="format-tags">
+                      <span class="format-tag">Vuejs</span>
+                      <span class="format-tag">html</span>
+                      <span class="format-tag">CSS/Bootstrap</span>
+                  </div>
+              </div>
+
+              <div>
+                  <div class="format-label">Backend</div>
+                  <div class="format-tags">
+                      <span class="format-tag">Node.js</span>
+                      <span class="format-tag">JavaScript</span>
+                      <span class="format-tag">MongoDB</span>
+                      <span class="format-tag">Python</span>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
@@ -212,29 +384,59 @@
 
 
     <!-- About me -->
-    <section class="my-5" id="about-me">
-      <div class="container-fluid">
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="d-flex align-items-center"> 
-              <h2><span class="hash">#</span>about-me</h2> 
-              <div class="line"></div> 
-            </div>
-          </div>
+    <section id="about-me">
+      <div class="container my-1">
+        <div class="d-flex align-items-center mb-4 text-start">
+          <h2><span class="hash">#</span>ABOUT-ME</h2>
+          <div class="line"></div>
         </div>
 
-        <div class="row align-items-center">
-          <div class="col-12 col-md-8">
-            <h2 class="display-6 fw-bold">Hey, I’m James!</h2>
-            <p>I’m a <span style="color: #C778DD; font-weight: bold;">Full-Stack Web Developer</span> and <span style="color: #C778DD; font-weight: bold;">cybersecurity specialist</span> from the Philippines. I’ve spent years diving deep into the world of code and digital defense, building websites that don’t just look good but stand strong against threats.</p>
+        <div class="row">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="terminal-window">
 
-            <p>My background blends front-end design, full-stack development, and web application security, giving me a unique edge in crafting experiences that are both beautiful and bulletproof.</p>
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">james@devsecops: ~ /about-me</span>
+              </div>
 
-            <p>Whether I’m designing interfaces or fortifying backends, I bring a hands-on, curious mindset to everything I build.</p>
-          </div>
+              <div class="terminal-body">
+                <div class="command-line mb-3">
+                  <span class="terminal-user">guest@portfolio:~$</span>
+                  <span class="terminal-command">whoami</span>
+                </div>
 
-          <div class="col-12 col-md-4 text-center my-3">
-            <img src="./images/hoodie.png" class="img-fluid" alt="Image of person with hoodie">
+                <div class="terminal-output">
+                  <h2 class="display-6 fw-bold">Hey, I’m <span class="accent">James</span>!</h2>
+                  <p class="mb-4">A simple guy who loves coffee!</p>
+
+                  <div class="mb-4">
+                    <span class="accent">[OBSERVATION]</span> Throughout my experience as part of a <span class="accent">Blue Team</span>, I noticed that blue teaming often feels like a cat-and-mouse game. Users get compromised due to their lack of knowledge, people relying on packages that are no longer maintained, or unpatched/insecure systems leading to <span class="accent">compromised</span>. Attacks never truly decrease; they only become more sophisticated, especially with the boom of <span class="accent">AI</span>. Alongside that experience, I discovered that I enjoy working on automation (Hey! Not that I’m a slacker), but because I value time more than anything.
+                  </div>
+
+                  <div class="mb-4">
+                    <span class="accent">[REALIZATION]</span> One day, it occurred to me, why spend all my time just defending the perimeter when I could learn to protect the development process itself?
+                  </div>
+
+                  <div class="mb-4">
+                    <span class="accent">[MISSION]</span> This is where I decided to focus more on the <span class="accent">"Shift-Left"</span> approach and dedicated myself to diving deep into <span class="accent">Web Development</span> and <span class="accent">DevSecOps</span> to build systems that aren't just functional, but automated and secure by design.
+                  </div>
+
+                  <div class="terminal-divider"></div>
+
+                  <div class="command-line">
+                    <span class="terminal-user">guest@portfolio:~$</span>
+                    <span class="terminal-command">cat hobbies/personal.txt</span>
+                  </div>
+
+                  <p class="mt-2">
+                    > Enough with the seriousness! aside from coffee, I love making people laugh, reading books, and playing the piano. Plus, I plan to travel the world very soon while EAT EAT EAT!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -243,76 +445,86 @@
 
     <!-- contact page -->
     <section class="my-5" id="contact">
-      <div class="container-fluid">
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="d-flex align-items-center"> 
-              <h2><span class="hash">#</span>contacts</h2> 
-              <div class="line"></div> 
-            </div>
-          </div>
+      <div class="container">
+        <div class="d-flex align-items-center mb-5 text-start">
+          <h2><span class="hash">#</span>CONTACT</h2> 
+          <div class="line"></div> 
         </div>
 
-        <div class="row align-items-center justify-content-center">
-          <div class="col-12 col-md-8">
-            <!-- Contact form -->
-            <form class="contact-form align-items-center mx-auto">
-              <div class="mb-2">
-                <label for="name" class="form-label-custom">Name</label>
-                <input type="text" class="input-custom" id="name" placeholder="John Doe">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="terminal-window">
+              
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">james@devsecops: ~ /contact</span>
               </div>
 
-              <div class="mb-2">
-                <label for="email" class="form-label-custom">Email</label>
-                <input type="email" class="input-custom" id="email" placeholder="name@company.com">
-              </div>
+              <div class="p-4 p-md-5">
+                <form class="contact-form">
+                  
+                  <div class="mb-4">
+                    <label for="name" class="form-label-custom">> WHOAMI / NAME</label>
+                    <input type="text" class="input-custom" id="name" name="name" placeholder="Guest User" required>
+                  </div>
 
-              <div class="mb-2">
-                <label for="subject" class="form-label-custom">Subject</label>
-                <input type="text" class="input-custom" id="subject">
-              </div>
+                  <div class="mb-4">
+                    <label for="email" class="form-label-custom">> FROM / EMAIL</label>
+                    <input type="email" class="input-custom" id="email" name="email" placeholder="email@example.com" required>
+                  </div>
 
-              <div class="mb-2">
-                <label for="message" class="form-label-custom">Message</label>
-                <textarea class="textarea-custom" id="message" rows="5"></textarea>
-              </div>
+                  <div class="mb-4">
+                    <label for="subject" class="form-label-custom">> LOG_LEVEL / SUBJECT</label>
+                    <input type="text" class="input-custom" id="subject" name="subject" placeholder="General Inquiry" required>
+                  </div>
 
-              <div class="text-center">
-                <button type="submit" class="btn-custom">Send message</button>
+                  <div class="mb-4">
+                    <label for="message" class="form-label-custom">> STDIN / MESSAGE</label>
+                    <textarea class="textarea-custom" id="message" name="message" rows="4" placeholder="Enter message here..."></textarea>
+                  </div>
+
+                  <div class="hp-trap" aria-hidden="true">
+                      <label for="hp_id">Security ID Verification - Do Not Fill</label>
+                      <input type="text" id="hp_id" name="hp_id" class="hp-trap" tabindex="-1" autocomplete="off">
+                  </div>
+
+                  <div class="g-recaptcha mb-4" data-sitekey="6Lf3bKQsAAAAAJm4_d2HqnRvtBSyI6-ktUd-Sxro"></div>
+
+                  <div class="text-start">
+                    <button type="button" id="sendBtn" class="btn-custom">Execute Send_Message.sh</button>
+                  </div>
+
+                </form>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- footer -->
     <footer class="text-light py-4">
       <div class="container-fluid px-4">
         <div class="row align-items-center">
           
-          <!-- Left side -->
           <div class="col-md-6 mb-3 mb-md-0 text-start">
             <p>&copy; 2026 Jum4nj1m Theme. All Rights Reserved.</p>
           </div>
 
-          <!-- Right side -->
-          <div class="col-md-6 text-md-end">
-            <a href="https://github.com/jum4nj1m" target="_blank" class="footer-link me-3"><img src="./images/github.png"></a>
-            <a href="https://www.linkedin.com/in/james-vhoun/" target="_blank" class="footer-link me-3"><img src="./images/linkedin.png"></a>
-            <a href="https://www.hackerrank.com/profile/jum4nj1m1" target="_blank" class="footer-link"><img src="./images/hackerrank.png"></a>
+            <div class="col-md-6 text-md-end">
+            <a href="https://github.com/jum4nj1m" target="_blank" rel="noopener noreferrer" class="footer-link me-3"><img src="./images/github.png" alt="GitHub" width="40" height="40"></a>
+            <a href="https://www.linkedin.com/in/james-vhoun/" target="_blank" rel="noopener noreferrer" class="footer-link me-3"><img src="./images/linkedin.png" alt="LinkedIn" width="40" height="40"></a>
+            <a href="https://www.hackerrank.com/profile/jum4nj1m1" target="_blank" rel="noopener noreferrer" class="footer-link"><img src="./images/hackerrank.png" alt="HackerRank" width="40" height="40"></a>
           </div>
 
         </div>
       </div>
     </footer>
 
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/matrix.js"></script>
   </body>
 </html>

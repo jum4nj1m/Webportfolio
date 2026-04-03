@@ -5,78 +5,74 @@
   box-sizing: border-box;
 }
 
-/*
-Color Roles
-Background        #282C33
-Headers           #FFFFFF
-Paragraphs        #ABB2BF
-Borders           #ABB2BF
-Accent/CTA        #C778DD
-*/
+html {
+  font-size: clamp(14px, 1.4vw, 18px);
+  height: 100%; 
+}
 
-html, body {
-  overflow-x: hidden; 
+body {
+  font-family: "Source Code Pro";
+  background-color: #131B2E; /* page excess color */
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #ABB2BF;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  background-color: #282C33;
-  border-bottom: 2px solid #C778DD;
+  background-color: #0B1326;
+  border-bottom: 0.125rem solid #00F9F9;
 }
 
 .navbar-brand {
   font-family: "Anonymous Pro";
   font-weight: 700;
-  letter-spacing: 1px;
-  color: #ABB2BF !important;
+  letter-spacing: 0.0625rem;
+  color: #00F9F9 !important;
 }
 
 .navbar-nav .nav-link {
   font-family: "Anonymous Pro";
-  font-size: 14px;
-  letter-spacing: 1px; 
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem; 
   color: #ABB2BF !important;
-  margin-right: 16px;
+  margin-right: 1rem;
   transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #C778DD !important;
+  color: #00F9F9 !important;
 }
 
 .navbar-toggler {
-  border-color: #ABB2BF;
+  border-color: #00F9F9;
 }
 
 .brand-logo {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  border: 2px solid #C778DD;
+  border: 0.125rem solid #00F9F9;
   object-fit: cover;
 }
 
 .profile-picture { 
   border-radius: 50%;
-  border: 3px solid #C778DD;
+  border: 0.1875rem solid #00F9F9;
   object-fit: cover;
 }
 
 
-body {
-  font-family: "Source Code Pro";
-  background-color: #282C33;
-  font-weight: 400;  
-  font-size: 16px;           
-  line-height: 26px;
-  letter-spacing: 0;
-  color: #ABB2BF;
-}
-
-#about p {
+/* NOTE: The HTML uses `id="about-me"`, so this selector wouldn't match. Updated selector below. */
+#about-me p {
   font-family: "Anonymous Pro";
   font-weight: 400;  
-  font-size: 16px;           
-  line-height: 26px;
+  font-size: 1rem;           
+  line-height: 1.625rem;
   letter-spacing: 0;
   color: #ABB2BF;
 }
@@ -85,8 +81,14 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: "Anonymous Pro";
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.03125rem;
   color: #FFFFFF;
+}
+
+/* Accent text used instead of inline styles */
+.accent {
+  color: #00F9F9;
+  font-weight: 700;
 }
 
 p {
@@ -105,10 +107,10 @@ ul {
 }
 
 .quote-text {
-  border: 1px solid #5c6370;
-  padding: 30px 50px;
+  border: 0.0625rem solid #5c6370;
+  padding: 1.875rem 3.125rem;
   color: #abb2bf;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: center;
   position: relative;
 }
@@ -117,36 +119,35 @@ ul {
 .quote-text::before, .quote-author::after {
   content: '“';
   position: absolute;
-  font-size: 50px;
+  font-size: 3.125rem;
   color: #5c6370;
-  background-color: #282c34;
-  padding: 0 10px;
+  background-color: #0B1326;
+  padding: 0 0.625rem;
   line-height: 1;
 }
 
 .quote-text::before {
-  top: -25px;
-  left: 20px;
+  top: -1.5625rem;
+  left: 1.25rem;
 }
 
 .quote-author {
   position: absolute;
-  right: -1px;
-  bottom: -45px;
-  border: 1px solid #5c6370;
+  right: 0.8rem;
+  bottom: -3.4rem;
+  border: 0.0625rem solid #5c6370;
   border-top: none;
-  padding: 15px 30px;
+  padding: 0.9375rem 1.875rem;
   color: #abb2bf;
-  font-size: 18px;
-  background-color: #282c34;
+  font-size: 1.125rem;
+  background-color: #0B1326;
 }
 
 .quote-author::after {
   content: '”';
-  top: -25px;
-  right: 20px;
+  top: -1.5625rem;
+  right: 1.25rem;
 }
-
 
 ::placeholder {
   font-family: "Source Code Pro";
@@ -154,111 +155,73 @@ ul {
   opacity: 1;
 }
 
-.card-body {
-  background-color: #282C33;
-}
-
-.card {
-  border: 2px solid #ABB2BF;
-  border-radius: 3px;
-}
-
-.card > img {
-  max-width: auto;
-  max-height: 400px;
-}
-
-.tool-box {
-  border: 2px solid #ABB2BF;
-  padding: 1rem;
-  background-color: #282C33;
-}
-
-.tool-list {
-  display: flex; 
-  flex-wrap: wrap;  
-  gap: 1rem;   
-  list-style: none;  
-  margin: 0;
-  padding: 0;
-}
-
-.tool-list li {
-  flex: 1 1 40%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tool-icon {
-  height: 60px;
-  width: auto;     /* replaces invalid max-width: auto */
-  padding: 6px;
-  border-radius: 15px;
-}
-
 .hash {
-  color: #C778DD;
+  color: #00F9F9;
   margin-right: 0.3rem;
-  font-size: 3.5rem;
+  font-size: clamp(2.2rem, 3.5rem, 4.2rem);
 }
 
 .line {
   flex-grow: 1;
-  height: 2px;
-  background-color: #C778DD;
+  height: 0.125rem;
+  background-color: #00F9F9;
   margin-left: 1rem;
   margin-top: 0.3rem;
 }
-
-/* Form container */
+/* Form container - Matches your card background */
 .contact-form {
-  max-width: 700px;
-  /*background-color: #282C33;*/
-  padding: 2rem;
-  /*border: 3px solid #ABB2BF;*/
+  max-width: 100%; /* Let the Bootstrap grid handle the width */
+  background-color: transparent; /* Let the terminal-window color show through */
+  padding: 1.5rem;
 }
 
-/* Labels */
+/* Labels with the '>' prompt style */
 .form-label-custom {
-  color: #ABB2BF;
+  color: #00F9F9; /* Your Cyan */
+  font-size: 0.85rem;
   margin-bottom: 0.5rem;
   display: block;
+  letter-spacing: 0.05rem;
 }
 
-/* Inputs */
+/* Inputs - Darker background for depth */
 .input-custom, .textarea-custom {
   width: 100%;
   padding: 0.75rem;
-  background-color: #282C33;
-  border: 1px solid #ABB2BF;
+  background-color: #0B132699; /* Slightly transparent dark blue */
+  border: 0.0625rem solid #4c566a; /* Subtle border */
   color: #ABB2BF;
+  transition: all 0.2s ease;
 }
 
 .input-custom:focus, .textarea-custom:focus {
   outline: none;
-  border-color: #C778DD;
-  box-shadow: 0 0 6px rgba(199, 120, 221, 0.6);
+  border-color: #00F9F9;
+  background-color: #00F9F908;
+  box-shadow: 0 0 0.625rem #00F9F933;
 }
 
-/* Button */
 .btn-custom {
-  background-color: #282C33;
-  color: #ABB2BF;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid #ABB2BF;
+  background-color: transparent;
+  color: #00F9F9;
+  padding: 0.6rem 2rem;
+  border: 0.0625rem solid #00F9F9;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
-  background-color: #ABB2BF;
-  color: #282C33;
+  background-color: rgba(0, 249, 249, 0.1);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 249, 249, 0.3);
 }
 
 footer {
-  border-top: 2px solid #C778DD;
-  background-color: #282C33;
+  border-top: 0.125rem solid #00F9F9;
+  background-color: #0B1326;
 }
 
 .footer-link {
@@ -267,33 +230,205 @@ footer {
   transition: color 0.3s ease;
 }
 
-.footer-link:hover {
-  color: #C778DD;
-}
-
 footer img {
-  max-width: auto;
-  max-height: 40px;
-  padding: 4px;
+  /* NOTE: use `max-width: 100%` or explicit height to control icon sizing. */
+  height: auto;
+  max-height: 2.5rem;
+  padding: 0.25rem;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* format Section Styles */
+.format-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.format-card {
+  background-color: #131B2E;
+  border: 0.0625rem solid #4c566a;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.format-card:hover {
+    border-color: #00F9F9;
+    transform: translateY(-5px);
+}
+
+.format-header {
+    font-family: "Anonymous Pro";
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00F9F9;
+    margin-bottom: 0.5rem;
+}
+
+.format-desc {
+    font-family: "Source Code Pro";
+    font-size: 0.9rem;
+    color: #ABB2BF;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 
-/*Code Styling (RESERVE) */
-code,
-pre {
-  font-family: "Source Code Pro";
-  font-size: 0.95rem;
-  background-color: #161b22;
+.format-label {
+    font-family: "Anonymous Pro";
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #ABB2BF;
+    margin-bottom: 0.5rem;
+}
+
+.format-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.format-tag {
+    font-size: 0.65rem;
+    color: #ABB2BF; 
+    background-color: #ABB2BF0D;
+    border: 0.0625rem solid #ABB2BF4D;
+    padding: 0.2rem 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-radius: 4px;
+}
+
+.format-tag-arrow {
+    display: inline-flex;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 0.65rem;
+    color: #ABB2BF; 
+    background-color: #ABB2BF0D;
+    border: 0.0625rem solid #ABB2BF4D;
+    padding: 0.2rem 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+
+.format-tag-arrow:hover {
+  background-color: #00F9F919;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: 0 0 0.9375rem #00F9F94D;
+}
+
+.format-tag-arrow::after {
+  content: "\2192";
+  margin-left: 0.3125rem;
+}
+
+/* Terminal Design for About Me */
+.terminal-window {
+  background-color: #131B2E;
+  border: 0.0625rem solid #4c566a;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.25rem #00000059;
+}
+
+.terminal-header {
+  background-color: #1c212b;
+  padding: 0.75rem 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 0.0625rem solid #4c566a;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 0.9rem;
+  color: #5c6370;
+}
+
+.terminal-body {
+  padding: 1.25rem;
+  font-family: "Source Code Pro", monospace;
+  line-height: 1.6;
   color: #ABB2BF;
 }
 
-code {
-  padding: 0.15em 0.35em;
-  border-radius: 4px;
+.terminal-user {
+    color: #00F9F9;
+    font-weight: bold;
 }
 
-pre {
-  padding: 1rem;
-  border-radius: 6px;
-  overflow-x: auto;
+.terminal-command {
+    color: #ffffff;
+}
+
+.terminal-divider {
+  border-top: 0.0625rem dashed #4c566a;
+  margin: 1rem 0;
+  opacity: 0.4;
+}
+
+.terminal-command::after {
+    content: "_";
+    animation: cursor-blink 1.2s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; 
+  display: block; 
+  background-color: #0B1326;
+}
+
+
+.hp-trap {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    z-index: -100;
+    pointer-events: none;
 }
