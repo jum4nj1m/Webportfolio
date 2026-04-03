@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Strips < and > to prevent basic HTML/Script injection
             const sanitize = (str) => str.replace(/[<>]/g, "");
 
-            const cleanName = sanitize(rawName);
-            const cleanEmail = sanitize(rawEmail);
-            const cleanSubject = sanitize(rawSubject);
-            const cleanMessage = sanitize(rawMessage);          
+            const cleanName = sanitize(nameValue);
+            const cleanEmail = sanitize(emailValue);
+            const cleanSubject = sanitize(subjectValue);
+            const cleanMessage = sanitize(messageValue);          
 
             // Validate that all fields are filled out
             if (!cleanName || !cleanEmail || !cleanSubject || !cleanMessage) {
