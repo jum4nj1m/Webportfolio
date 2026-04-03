@@ -52,6 +52,23 @@ body {
   border-color: #00F9F9;
 }
 
+.navbar-toggler-icon {
+    background-image: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+}
+
+.navbar-toggler-icon::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 2px;
+    background-color: #00F9F9 !important;
+    box-shadow: 0 -0.5rem 0 0 #00F9F9, 0 0.5rem 0 0 #00F9F9 !important;
+}
+
 .brand-logo {
   width: 2.5rem;
   height: 2.5rem;
@@ -232,14 +249,6 @@ footer img {
   height: auto;
   max-height: 2.5rem;
   padding: 0.25rem;
-}
-
-.container-fluid {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 /* format Section Styles */
