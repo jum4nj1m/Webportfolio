@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Source Code Pro";
-  background-color: #131B2E; /* page excess color */
+  background-color: #131B2E; 
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -66,8 +66,6 @@ body {
   object-fit: cover;
 }
 
-
-/* NOTE: The HTML uses `id="about-me"`, so this selector wouldn't match. Updated selector below. */
 #about-me p {
   font-family: "Anonymous Pro";
   font-weight: 400;  
@@ -85,7 +83,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #FFFFFF;
 }
 
-/* Accent text used instead of inline styles */
+
 .accent {
   color: #00F9F9;
   font-weight: 700;
@@ -168,28 +166,28 @@ ul {
   margin-left: 1rem;
   margin-top: 0.3rem;
 }
-/* Form container - Matches your card background */
+
 .contact-form {
-  max-width: 100%; /* Let the Bootstrap grid handle the width */
-  background-color: transparent; /* Let the terminal-window color show through */
+  max-width: 100%;
+  background-color: transparent; 
   padding: 1.5rem;
 }
 
 /* Labels with the '>' prompt style */
 .form-label-custom {
-  color: #00F9F9; /* Your Cyan */
+  color: #00F9F9;
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
   display: block;
   letter-spacing: 0.05rem;
 }
 
-/* Inputs - Darker background for depth */
+
 .input-custom, .textarea-custom {
   width: 100%;
   padding: 0.75rem;
-  background-color: #0B132699; /* Slightly transparent dark blue */
-  border: 0.0625rem solid #4c566a; /* Subtle border */
+  background-color: #0B132699;
+  border: 0.0625rem solid #4c566a;
   color: #ABB2BF;
   transition: all 0.2s ease;
 }
@@ -231,7 +229,6 @@ footer {
 }
 
 footer img {
-  /* NOTE: use `max-width: 100%` or explicit height to control icon sizing. */
   height: auto;
   max-height: 2.5rem;
   padding: 0.25rem;
@@ -416,7 +413,6 @@ footer img {
   display: block; 
   background-color: #0B1326;
 }
-
 
 .hp-trap {
     position: absolute;
